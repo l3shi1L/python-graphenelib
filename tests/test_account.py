@@ -1,8 +1,16 @@
 import ecdsa
 import unittest
 import hashlib
-from graphenebase.base58 import Base58
-from graphenebase.account import BrainKey, Address, PublicKey, PrivateKey, PasswordKey, GrapheneAddress, BitcoinAddress
+from .fixtures import (
+    Base58,
+    BrainKey,
+    Address,
+    PublicKey,
+    PrivateKey,
+    PasswordKey,
+    GrapheneAddress,
+    BitcoinAddress
+)
 
 
 class Testcases(unittest.TestCase):

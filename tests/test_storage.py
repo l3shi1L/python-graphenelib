@@ -1,22 +1,19 @@
 import os
 import unittest
 
-from graphenebase.account import PrivateKey
-from graphenebase import bip38
-from graphenestorage.exceptions import (
+from .fixtures import (
+    PrivateKey,
+    bip38,
     WrongMasterPasswordException,
     KeyAlreadyInStoreException,
-    WalletLocked
-)
-
-import graphenestorage as storage
-from graphenestorage.interfaces import (
+    WalletLocked,
+    storage,
     StoreInterface,
     KeyInterface,
     ConfigInterface,
     EncryptedKeyInterface,
+    SQLiteStore
 )
-from graphenestorage.sqlite import SQLiteStore
 
 
 def pubprivpair(wif):
